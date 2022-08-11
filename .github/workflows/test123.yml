@@ -1,14 +1,14 @@
  name: py
- on:
- push:
+on:
+  push:
   schedule:
     - cron: "0 0 * * *" #runs at 00:00 UTC everyday
 
- jobs:
+jobs:
   build:
     runs-on: ubuntu-latest
- steps:
-   -name: checkout code
+    steps:
+     -name: checkout code
     uses: actions/checkout@v2
   run: |
     echo "::set-output name=mix-compile--warnings-as-errors::$(mix compile --warnings-as-errors)\n"
