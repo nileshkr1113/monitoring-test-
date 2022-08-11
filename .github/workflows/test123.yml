@@ -1,0 +1,22 @@
+ name: py
+on:
+  schedule:
+    - cron: "0 0 * * *" #runs at 00:00 UTC everyday
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+ steps:
+   -name: checkout code
+    uses: actions/checkout@v2
+  run: |
+    echo "::set-output name=mix-compile--warnings-as-errors::$(mix compile --warnings-as-errors)\n"
+    echo "::set-output name=mix-format--check-formatted::$(mix format --check-formatted)\n"
+    echo "::set-output name=mix-ecto_create::$(mix ecto.create)\n"
+    echo "::set-output name=mix-ecto_migrate::$(mix ecto.migrate)\n"
+    echo "::set-output name=mix-test::$(mix test)\n"
+  id: run_tests
+  env:
+    MIX_ENV: test
+    PGHOST: localhost
+    PGUSER: postgres
