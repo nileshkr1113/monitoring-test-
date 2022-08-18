@@ -1,6 +1,6 @@
 name: Maximo Queue depth Monitor
 on: 
-  push:
+  
   pull:
    branches: [ main ]
    workflow-dispatch:
