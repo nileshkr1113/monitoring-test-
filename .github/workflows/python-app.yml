@@ -20,6 +20,6 @@ jobs:
     - name: Set up Python 3.10
       uses: actions/setup-python@v4
       
-    - name: Install dependencies
-      run: python install twine
+    #- name: Install dependencies
+     # run: python install twine
         
