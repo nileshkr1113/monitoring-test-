@@ -26,7 +26,7 @@ jobs:
   Regex_Check:
    runs-on: windows
    steps:
-     - uses:  actions/checkout@v3
+    # - uses:  actions/checkout@v3
      - name:  Regex check
        run: |
          import os
