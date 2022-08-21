@@ -47,22 +47,22 @@ jobs:
 
          # checking condition for string found or not
          if string1 in readfile:
-	       print('Build_Result')
+	   print('Build_Result'):
          elif string2 in readfile:
-         print('Build_Result')
+           print('Build_Result')
          elif string3 in readfile:
-         print('Build_Result')
+           print('Build_Result')
          elif string4 in readfile:
-         print('Build_Result')
+           print('Build_Result')
          elif string5 in readfile:
-         print('Build_Result')
+           print('Build_Result')
          elif string6 in readfile: 
-         print('Build_Result')
+           print('Build_Result')
          elif string7 in readfile:
-         print('Build_Result')
+           print('Build_Result')
     
          else:
-	       print('SUCCESS')
+	   print('SUCCESS')
 
          # closing a file
          file1.close()
