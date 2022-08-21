@@ -28,7 +28,7 @@ jobs:
    steps:
      - uses:  actions/checkout@v3
      - name:  Regex check
-       run:  |
+       run: |
          import os
          Build_Result = 'FAILURE'
          string1 = 'The Excel sheet was not created'
