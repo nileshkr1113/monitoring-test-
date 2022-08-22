@@ -6,7 +6,6 @@ jobs:
     steps:
       -name: send email 
        uses: actions/checkout@v3
-       if: always()
        uses: dawidd6/action-send-mail@v2
        with:
     # mail server settings
