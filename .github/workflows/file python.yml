@@ -30,6 +30,7 @@ jobs:
      - name:  Regex check
        run: |
          python regex.py
+         shell: py
          
  
    
