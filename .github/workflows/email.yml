@@ -1,5 +1,5 @@
 name: email
-on: [pull_request]
+on: [ push ]
 jobs:
   Email notification:
     runs-on: windows-latest
