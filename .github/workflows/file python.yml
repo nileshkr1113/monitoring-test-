@@ -25,7 +25,11 @@ jobs:
      
   Regex_Check:
    runs-on: windows-latest
+   outputs:
+     output1: ${{ steps.step1.outputs.test }}
    steps:
+     -id:  step1
+      run: echo "::set-output name=test::$ {{Build_Result}}"
     # - uses:  actions/checkout@v3
      - name:  Regex check
        run: |
