@@ -4,7 +4,7 @@ on:
   push:
     branches: main
 env:
-  RUN_NUMBER:  ${GITHUB_RUN_ID}-${GITHUB_RUN_NUMBER}
+  RUN_NUMBER:  ${{ github.run_number }}
 jobs:
   build:
     runs-on: windows-latest
