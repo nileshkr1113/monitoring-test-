@@ -13,6 +13,7 @@ jobs:
 
       - name: ENV1 CHECK 
         run: echo "$GITHUB_RUN_NUMBER"
+        shell: pwsh
           #echo Hello, world!
           #echo ${{ GITHUB_RUN_NUMBER  }}
           #echo ${{ GITHUB_REPOSITORY  }}
