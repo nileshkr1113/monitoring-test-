@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: ENV1 CHECK 
+      - name: ENV CHECK 
         run: |
           #echo Hello, world!
           echo ${{ GITHUB_RUN_NUMBER  }}
