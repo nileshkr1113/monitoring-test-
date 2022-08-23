@@ -4,7 +4,7 @@ on:
   push:
     branches: main
 env:
-  RUN_NUMBER:  ${GITHUB_RUN_NUMBER}
+  RUN_NUMBER:  ${GITHUB_RUN_ID}-${GITHUB_RUN_NUMBER}
 jobs:
   build:
     runs-on: windows-latest
@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: ENV1 CHECK 
-        run: echo ${{env.RUN_NUMBER}}
+        run: echo ${{  env.RUN_NUMBER  }}
         
           #echo Hello, world!
           #echo ${{ GITHUB_RUN_NUMBER  }}
