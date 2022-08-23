@@ -10,10 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Hello World
+      - name: ENV CHECK 
         run: |
           echo Hello, world!
-          echo "GITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"
+          echo "GITHUB RUN NUMBER:  ${GITHUB_RUN_NUMBER}"
         
   email:
     runs-on: ubuntu-latest
