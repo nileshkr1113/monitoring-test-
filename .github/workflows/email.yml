@@ -12,8 +12,8 @@ jobs:
 
       - name: ENV CHECK 
         run: |
-          echo Hello, world!
-          echo "${GITHUB_RUN_NUMBER}"
+          #echo Hello, world!
+          echo ${GITHUB_RUN_NUMBER}
         
   email:
     runs-on: ubuntu-latest
