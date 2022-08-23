@@ -13,7 +13,7 @@ jobs:
       - name: Hello World
         run: |
           echo Hello, world!
-          echo "$GITHUB_REPOSITORY_OWNER"
+          echo "GITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"
         
   email:
     runs-on: ubuntu-latest
