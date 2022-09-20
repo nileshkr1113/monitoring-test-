@@ -6,7 +6,7 @@ env:
   RUN_NUMBER:  ${{ github.run_number }}
 jobs:
   build:
-    runs-on: ubuntu_latest
+    runs-on: windows-latest
     
     steps:
       - uses: actions/checkout@v2
@@ -26,7 +26,7 @@ jobs:
           filename: 'test.json'
         
   email:
-    runs-on: ubuntu_latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
 
