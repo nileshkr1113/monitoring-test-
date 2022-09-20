@@ -41,7 +41,7 @@ jobs:
           body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
           to: nileshkr1112@gmail.com
           from: Nilesh kumar
-          attachments: ${{github.workspace}}\test.txt
+          attachments: D:\a\monitoring-test-\monitoring-test-\test.txt
             #- filename: 'text1.txt'
              # path: 'https://raw.github.com/nodemailer/nodemailer/master/LICENSE'
    
