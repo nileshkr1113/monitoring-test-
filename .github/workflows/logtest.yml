@@ -23,7 +23,7 @@ jobs:
         uses: dwarak91/log-to-file@0.1
         with:
           json: 'Write this data to log file with timestamp'
-          filename: 'test.txt'
+          filename: 'test.json'
           
      # - name: email check
       #  uses: actions/checkout@v2
@@ -41,8 +41,8 @@ jobs:
           body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
           to: nileshkr1112@gmail.com
           from: Nilesh kumar
-          attachments: D:\a\monitoring-test-\monitoring-test-\test.txt
-            #- filename: 'text1.txt'
+          attachments: D:\a\monitoring-test-\monitoring-test-\test.json
+            #- filename: 'text1.json'
              # path: 'https://raw.github.com/nodemailer/nodemailer/master/LICENSE'
    
         
