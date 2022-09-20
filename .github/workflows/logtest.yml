@@ -24,6 +24,8 @@ jobs:
         with:
           json: 'Write this data to log file with timestamp'
           filename: 'test.json'
+          run:  dir
+      
         
   email:
     runs-on: windows-latest
