@@ -21,7 +21,7 @@ jobs:
   
       - name: Get Git Log
         id: git_log
-        uses: JantHsueh/get-git-log-action@master
+        uses: JantHsueh/get-git-log-action@main
         
   email:
     runs-on: Linux
