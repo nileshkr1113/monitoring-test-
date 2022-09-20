@@ -24,12 +24,12 @@ jobs:
         with:
           json: 'Write this data to log file with timestamp'
           filename: 'test.txt'
-          run:  dir
+          
       - name: email check
         uses: actions/checkout@v2
 
-      - name: Hello World
-        run: echo Hello, world!
+      - name: Dir check 
+        run: dir
       - name: email check 
         uses: dawidd6/action-send-mail@v3
         with:
