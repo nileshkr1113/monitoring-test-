@@ -25,12 +25,8 @@ jobs:
           json: 'Write this data to log file with timestamp'
           filename: 'test.txt'
           run:  dir
-      
-        
-  email:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v2
+      - name: email check
+        uses: actions/checkout@v2
 
       - name: Hello World
         run: echo Hello, world!
