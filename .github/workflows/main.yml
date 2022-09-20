@@ -1,21 +1,53 @@
-name: remote ssh .command
-on: [pull_request]
-jobs:
+name: Build
 
+on:  push
+
+env:
+  RUN_NUMBER:  ${{ github.run_number }}
+jobs:
   build:
-    name: Build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu_latest
+    
     steps:
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        script: |
-          cd /home/ansibleadmin/
-          mkdir test012
-          
-          whoami
+      - uses: actions/checkout@v2
+
+      - name: ENV1 CHECK 
+        run: echo "${{  env.RUN_NUMBER  }}"
+        
+          #echo Hello, world!
+          #echo ${{ GITHUB_RUN_NUMBER  }}
+          #echo ${{ GITHUB_REPOSITORY  }}
+        
+  
+      - name: Get Git Log
+        uses: dwarak91/log-to-file@0.1
+        with:
+          json: 'Write this data to log file with timestamp'
+          filename: 'test.json'
+        
+  email:
+    runs-on: ubuntu_latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Hello World
+        run: echo Hello, world!
+      - name: email check 
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+          body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
+          to: nileshkr1112@gmail.com
+          from: Nilesh kumar
+          #attachments: attachmendts.zip,git.diff,./dist/static/*.js 
+            #- filename: 'text1.txt'
+             # path: 'https://raw.github.com/nodemailer/nodemailer/master/LICENSE'
+   
+        
+    
+    
           
