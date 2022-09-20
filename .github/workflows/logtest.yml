@@ -25,8 +25,8 @@ jobs:
           json: 'Write this data to log file with timestamp'
           filename: 'test.txt'
           
-      - name: email check
-        uses: actions/checkout@v2
+     # - name: email check
+      #  uses: actions/checkout@v2
 
       - name: Dir check 
         run: dir
