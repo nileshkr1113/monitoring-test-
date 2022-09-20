@@ -20,8 +20,10 @@ jobs:
         
   
       - name: Get Git Log
-        id: git_log
-        uses: JantHsueh/get-git-log-action@main
+        uses: dwarak91/log-to-file@0.1
+        with:
+          json: 'Write this data to log file with timestamp'
+          filename: 'test.json'
         
   email:
     runs-on: Linux
