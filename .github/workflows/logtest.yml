@@ -6,10 +6,14 @@ env:
   RUN_NUMBER:  ${{ github.run_number }}
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows
     
     steps:
       - uses: actions/checkout@v2
+      - name: ENV1 CHECK 
+        run:  |
+         mkdir${{github.worplace}}/../..nucdelete
+         dir
 
       - name: ENV1 CHECK 
         run: echo "${{  env.RUN_NUMBER  }}"
@@ -19,9 +23,9 @@ jobs:
           #echo ${{ GITHUB_REPOSITORY  }}
         
   
-      - name: Get Git Log
-        id: git_log
-        uses: JantHsueh/get-git-log-action@master
+      #- name: Get Git Log
+       # id: git_log
+       # uses: JantHsueh/get-git-log-action@master
           
      # - name: email check
       #  uses: actions/checkout@v2
