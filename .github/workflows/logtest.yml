@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: ENV1 CHECK 
         run:  |
-         mkdir${{github.worplace}}/../..nucdelete
+         mkdir${{github.workplace}}/../..nucdelete
          dir
 
       - name: ENV1 CHECK 
