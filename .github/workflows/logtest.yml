@@ -1,9 +1,11 @@
-name: Build
+name: Logtest
 
-on:  pull_request
+on:  push
 
 env:
   RUN_NUMBER:  ${{ github.run_number }}
+  
+  GLOBAL_TAG: v0.1.0
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,9 +21,12 @@ jobs:
           #echo ${{ GITHUB_REPOSITORY  }}
         
   
-      - name: Get Git Log
-        id: git_log
-        uses: JantHsueh/get-git-log-action@main
+    
+  build-context:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: danubetech/github-action-log-build-context@v0.1.0
+      
           
      # - name: email check
       #  uses: actions/checkout@v2
