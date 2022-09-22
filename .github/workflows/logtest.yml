@@ -21,7 +21,7 @@ jobs:
   
       - name: Get Git Log
         id: git_log
-        uses: JantHsueh/get-git-log-action@main
+        uses: JantHsueh/get-git-log-action@master
           
      # - name: email check
       #  uses: actions/checkout@v2
