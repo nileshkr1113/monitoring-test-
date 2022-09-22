@@ -6,7 +6,7 @@ env:
   RUN_NUMBER:  ${{ github.run_number }}
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: Linux
     
     steps:
       - uses: actions/checkout@v2
