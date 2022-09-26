@@ -1,6 +1,9 @@
 name: Logtest
 
-on:  push
+on:  
+  schedule:
+    - cron: '*/5 * * * 1-6'
+     
 
 env:
   RUN_NUMBER:  ${{ github.run_number }}
