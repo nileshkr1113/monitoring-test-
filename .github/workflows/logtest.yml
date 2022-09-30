@@ -1,9 +1,9 @@
 name: Logtest
 
-on:  
-  workflow_dispatch:  
-  schedule:
-    - cron: '*/5 * * * 1-6'
+on: Pull_request 
+  #workflow_dispatch:  
+  #schedule:
+    #- cron: '*/5 * * * 1-6'
      
 
 env:
